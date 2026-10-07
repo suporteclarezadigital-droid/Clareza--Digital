@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Clareza Digital — Começa no Digital com Direção</title>
+
+  <meta
+    name="description"
+    content="Um guia prático para quem quer começar no digital com mais clareza, direção e ação."
+  >
+
+  <style>
+    :root {
+      --black: #111111;
+      --dark: #191919;
+      --gold: #b18a42;
+      --gold-light: #d6b56d;
+      --white: #ffffff;
+      --cream: #faf9f6;
+      --gray: #6d6d6d;
+      --light-gray: #eeeeeb;
+      --border: #e5e2dc;
+      --green: #176b45;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.95);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      font-size: 15px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-link {
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 80px 0 70px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(177,138,66,.09), transparent 28%),
+        var(--white);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 22px;
+      background: #fff;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      max-width: 700px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero-text {
+      margin-top: 24px;
+      font-size: 19px;
+      color: var(--gray);
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 10px;
+      padding: 15px 23px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--black);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #252525;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      background: #96732f;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--black);
+    }
+
+    .price-mini {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .price-mini strong {
+      color: var(--black);
+      font-size: 21px;
+    }
+
+    /* BOOK MOCKUP */
+
+    .book-area {
+      display: flex;
+      justify-content: center;
+      perspective: 1200px;
+    }
+
+    .book {
+      width: 290px;
+      min-height: 390px;
+      border-radius: 8px 18px 18px 8px;
+      background:
+        linear-gradient(145deg, #171717, #292929);
+      color: white;
+      padding: 35px;
+      position: relative;
+      box-shadow: 25px 30px 55px rgba(0,0,0,.2);
+      transform: rotateY(-12deg) rotateX(3deg);
+    }
+
+    .book::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 8px;
+      height: 100%;
+      background: var(--gold);
+      border-radius: 5px 0 0 5px;
+    }
+
+    .book-small {
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .book h2 {
+      font-size: 36px;
+      line-height: 1.05;
+      margin-top: 30px;
+      letter-spacing: -1px;
+    }
+
+    .book p {
+      margin-top: 22px;
+      color: #cfcfcf;
+      font-size: 14px;
+    }
+
+    .book-author {
+      position: absolute;
+      bottom: 30px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-light {
+      background: var(--cream);
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .section-head p {
+      color: var(--gray);
+      margin-top: 16px;
+      font-size: 17px;
+    }
+
+    /* PAIN */
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .pain-card {
+      padding: 25px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .pain-card strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .pain-card p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* QUIZ */
+
+    .quiz-box {
+      background: var(--dark);
+      color: white;
+      border-radius: 24px;
+      padding: clamp(25px, 5vw, 55px);
+      max-width: 850px;
+      margin: auto;
+      box-shadow: 0 25px 70px rgba(0,0,0,.12);
+    }
+
+    .quiz-progress {
+      height: 5px;
+      background: #3b3b3b;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .quiz-progress span {
+      display: block;
+      width: 20%;
+      height: 100%;
+      background: var(--gold-light);
+      transition: .3s;
+    }
+
+    .quiz-step {
+      display: none;
+    }
+
+    .quiz-step.active {
+      display: block;
+    }
+
+    .quiz-step h3 {
+      font-size: 28px;
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .quiz-option {
+      width: 100%;
+      padding: 16px;
+      text-align: left;
+      border: 1px solid #414141;
+      background: #242424;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .quiz-option:hover {
+      border-color: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .quiz-result {
+      display: none;
+      text-align: center;
+    }
+
+    .quiz-result strong {
+      color: var(--gold-light);
+    }
+
+    .result-box {
+      background: #242424;
+      border: 1px solid #3d3d3d;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    /* BENEFITS */
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .benefit {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: white;
+    }
+
+    .check {
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    /* TRANSFORMATION */
+
+    .transform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .transform-card {
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .transform-card.before {
+      background: #fafafa;
+    }
+
+    .transform-card.after {
+      background: #171717;
+      color: white;
+    }
+
+    .transform-card ul {
+      list-style: none;
+      margin-top: 20px;
+      display: grid;
+      gap: 11px;
+    }
+
+    /* METHOD */
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .method-card {
+      padding: 25px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: white;
+    }
+
+    .method-letter {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .method-card h3 {
+      margin-top: 10px;
+    }
+
+    .method-card p {
+      color: var(--gray);
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    /* VSL */
+
+    .video-wrapper {
+      max-width: 850px;
+      margin: auto;
+      background: #111;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 25px 70px rgba(0,0,0,.15);
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* AUTHOR */
+
+    .author {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .author-photo {
+      min-height: 350px;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, #eeeeeb, #faf9f6);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: #999;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .author-text p {
+      margin-top: 18px;
+      color: var(--gray);
+    }
+
+    /* SOCIAL PROOF */
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .proof-card {
+      min-height: 250px;
+      border: 1px dashed #c8c4bb;
+      border-radius: 14px;
+      background: #fafafa;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #999;
+      padding: 20px;
+    }
+
+    /* OFFER */
+
+    .offer {
+      background: #111;
+      color: white;
+    }
+
+    .offer-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .offer-price {
+      font-size: clamp(50px, 8vw, 85px);
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1;
+      margin: 20px 0;
+    }
+
+    .offer-sub {
+      color: #c7c7c7;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .offer-details {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .offer-pill {
+      padding: 9px 14px;
+      border: 1px solid #3c3c3c;
+      border-radius: 100px;
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: 0;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 0 20px;
+      color: var(--gray);
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* FINAL */
+
+    .final {
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .final p {
+      max-width: 650px;
+      margin: 18px auto 30px;
+      color: var(--gray);
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-grid,
+      .author,
+      .transform-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 45px;
+      }
+
+      .book {
+        width: 245px;
+        min-height: 330px;
+      }
+
+      .pain-grid,
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .book {
+        transform: none;
+      }
+
+      .quiz-box {
+        border-radius: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">CLAREZA <span>DIGITAL</span></div>
+    <a href="#quiz" class="nav-link">Descobrir o meu ponto de partida →</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          GUIA PRÁTICO PARA INICIANTES
+        </div>
+
+        <h1>
+          Antes de procurar mais informação,
+          <span>encontra uma direção.</span>
+        </h1>
+
+        <p class="hero-text">
+          O Clareza Digital foi criado para quem quer começar no digital,
+          mas sente que tem informação demais e direção de menos.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#quiz" class="btn btn-primary">
+            DESCOBRIR O MEU PONTO DE PARTIDA
+          </a>
+
+          <a href="#oferta" class="btn btn-outline">
+            CONHECER O GUIA
+          </a>
+        </div>
+
+        <div class="price-mini">
+          <span>Guia digital</span>
+          <strong>240 MT</strong>
+          <span>• acesso digital</span>
+        </div>
+      </div>
+
+      <div class="book-area">
+        <div class="book">
+          <div class="book-small">MÉTODO CLAREZA</div>
+
+          <h2>
+            Clareza para
+            Começar no
+            Digital
+          </h2>
+
+          <p>
+            Um caminho prático para sair da confusão,
+            escolher uma direção e começar a agir.
+          </p>
+
+          <div class="book-author">
+            Paulo José
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- QUIZ -->
+
+  <section id="quiz" class="section-light">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="section-label">Começa aqui</div>
+
+        <h2>
+          Descobre o que provavelmente está a travar o teu início.
+        </h2>
+
+        <p>
+          Responde a algumas perguntas. No final, vais receber uma leitura
+          simples do teu momento atual e perceber onde deves concentrar
+          a tua atenção primeiro.
+        </p>
+      </div>
+
+      <div class="quiz-box">
+
+        <div class="quiz-progress">
+          <span id="quizProgress"></span>
+        </div>
+
+        <div class="quiz-step active" data-step="1">
+
+          <h3>
+            Qual destas situações descreve melhor o teu momento?
+          </h3>
+
+          <div class="quiz-options">
+
+            <button class="quiz-option" data-value="direction">
+              Tenho muita informação, mas não sei por onde começar.
+            </button>
+
+            <button class="quiz-option" data-value="offer">
+              Sei algumas coisas, mas não sei o que poderia vender.
+            </button>
+
+            <button class="quiz-option" data-value="action">
+              Sei o que deveria fazer, mas continuo a adiar.
+            </button>
+
+            <button class="quiz-option" data-value="restart">
+              Já comecei antes, mas parei e agora estou perdido novamente.
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="quiz-step" data-step="2">
+
+          <h3>
+            O que mais te preocupa neste momento?
+          </h3>
+
+          <div class="quiz-options">
+
+            <button class="quiz-option" data-value="direction">
+              Escolher um caminho errado.
+            </button>
+
+            <button class="quiz-option" data-value="offer">
+              Não conseguir transformar uma habilidade numa oferta.
+            </button>
+
+            <button class="quiz-option" data-value="action">
+              Começar e abandonar novamente.
+            </button>
+
+            <button class="quiz-option" data-value="restart">
+              Perder mais tempo sem sair do lugar.
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="quiz-step" data-step="3">
+
+          <h3>
+            O que tens disponível hoje?
+          </h3>
+
+          <div class="quiz-options">
+
+            <button class="quiz-option" data-value="resources">
+              Tenho um telemóvel e acesso à internet.
+            </button>
+
+            <button class="quiz-option" data-value="knowledge">
+              Já tenho algumas habilidades ou conhecimentos.
+            </button>
+
+            <button class="quiz-option" data-value="audience">
+              Já publico conteúdo ou tenho alguma audiência.
+            </button>
+
+            <button class="quiz-option" data-value="beginner">
+              Ainda estou praticamente no início.
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="quiz-step" data-step="4">
+
+          <h3>
+            O que gostarias de conseguir primeiro?
+          </h3>
+
+          <div class="quiz-options">
+
+            <button class="quiz-option" data-value="direction">
+              Saber exatamente qual deve ser o meu próximo passo.
+            </button>
+
+            <button class="quiz-option" data-value="offer">
+              Criar uma primeira oferta.
+            </button>
+
+            <button class="quiz-option" data-value="action">
+              Finalmente começar a executar.
+            </button>
+
+            <button class="quiz-option" data-value="sales">
+              Aprender a transformar atenção em conversas e vendas.
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="quiz-step" data-step="5">
+
+          <h3>
+            Qual frase representa melhor o que procuras?
+          </h3>
+
+          <div class="quiz-options">
+
+            <button class="quiz-option" data-value="clarity">
+              Quero parar de andar de estratégia em estratégia.
+            </button>
+
+            <button class="quiz-option" data-value="clarity">
+              Quero construir algo, mesmo começando pequeno.
+            </button>
+
+            <button class="quiz-option" data-value="clarity">
+              Quero aprender e aplicar, não apenas consumir conteúdo.
+            </button>
+
+            <button class="quiz-option" data-value="clarity">
+              Quero uma direção simples para começar.
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="quiz-result" id="quizResult">
+
+          <div class="section-label">
+            O teu ponto de partida
+          </div>
+
+          <h3 id="resultTitle"></h3>
+
+          <div class="result-box">
+            <p id="resultText"></p>
+          </div>
+
+          <p>
+            O <strong>Método CLAREZA</strong> foi pensado exatamente para
+            organizar esse caminho: clarificar, localizar, analisar,
+            resolver, executar, zelar e avaliar.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="#oferta" class="btn btn-gold">
+              VER COMO O GUIA PODE AJUDAR
+            </a>
+
+            <button
+              class="btn btn-outline"
+              id="restartQuiz"
+              type="button"
+            >
+              RESPONDER NOVAMENTE
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PAIN -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          Talvez estejas aqui
+        </div>
+
+        <h2>
+          O problema pode não ser falta de vontade.
+        </h2>
+
+        <p>
+          Às vezes, o problema é tentar decidir tudo ao mesmo tempo
