@@ -52,7 +52,7 @@
     .section-head p { color: var(--gray); margin-top: 12px; font-size: 15px; }
 
     .video-section { text-align: center; background: var(--dark); color: white; border-radius: 20px; padding: 50px 20px; max-width: 780px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
-    .video-wrapper { max-width: 300px; margin: 25px auto 0; background: #000; border-radius: 14px; overflow: hidden; aspect-ratio: 9 / 16; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .video-wrapper { max-width: 300px; margin: 25px auto; background: #000; border-radius: 14px; overflow: hidden; aspect-ratio: 9 / 16; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
     .video-wrapper iframe { width: 100%; height: 100%; border: 0; }
 
     .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 820px; margin: auto; text-align: left; }
@@ -78,7 +78,7 @@
     .audience-card ul { list-style: none; display: grid; gap: 8px; font-size: 13px; color: var(--gray); }
     .audience-card li::before { content: "• "; color: var(--gold); font-weight: bold; }
 
-    /* FAQ CORRIGIDO COM RESPOSTAS VISÍVEIS AO CLICAR */
+    /* FAQ */
     .faq-container { max-width: 720px; margin: auto; text-align: left; }
     .faq-item { background: white; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
     .faq-item.active { border-color: var(--gold); }
@@ -125,21 +125,30 @@
     </div>
   </section>
 
-  <!-- VSL -->
+  <!-- VSL + BOTÃO "DECIDIR AGORA" LOGO ABAIXO DO VÍDEO -->
   <section id="apresentacao" class="section-light">
     <div class="container">
       <div class="video-section">
         <div class="section-label" style="color: var(--gold-light);">Nota do Autor</div>
         <h2>Antes de começar, assiste a este vídeo</h2>
         <p style="color: #bbb; font-size: 14px; max-width: 500px; margin: 12px auto 0; line-height: 1.6;">Talvez o que esteja a impedir o teu início no Digital não seja a falta de informação, mas a dificuldade de entender que tudo começa com uma decisão que aparenta ser simples, mas é ela que muda tudo.</p>
+        
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/ToxV7EyNNT4" title="Vídeo de Apresentação" allowfullscreen></iframe>
         </div>
+
+        <!-- BOTÃO "DECIDIR AGORA" LOGO APÓS O VÍDEO -->
+        <div style="max-width: 380px; margin: 20px auto 0;">
+          <a href="https://pay.tutora.co.mz/58889795912a4b84bf757ba1593d0a6d" target="_blank" class="btn btn-gold">
+            DECIDIR AGORA 🚀
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- MÉTODO CLAREZA (ENTRADA DIRETA) -->
+  <!-- MÉTODO CLAREZA -->
   <section>
     <div class="container">
       <div class="section-head">
@@ -245,7 +254,7 @@
     </div>
   </section>
 
-  <!-- FAQ 7 PERGUNTAS CORRIGIDAS -->
+  <!-- FAQ 7 PERGUNTAS -->
   <section class="section-light">
     <div class="container">
       <div class="section-head">
@@ -276,7 +285,4 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">6. E se eu não tiver muito tempo livre na minha rotina? <span>+</span></button>
-          <div class="faq-answer">O plano foi estruturado para caber em rotinas apertadas (cerca de 5 a 8 horas por semana), adaptando-se ao tempo real que tens disponível.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">7. Por onde devo começar assim que adquirir o método? <span
+          <div class="faq-answer">O plano foi estruturado para caber em r
