@@ -13,7 +13,7 @@
       --gold-light: #dfbe64;
       --white: #ffffff;
       --cream: #f9f8f5;
-      --gray: #717171;
+      --gray: #686868;
       --border: #e2dfd7;
       --green: #15573b;
     }
@@ -32,7 +32,6 @@
     .nav-link { font-size: 13px; color: var(--black); font-weight: 700; background: var(--cream); padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); }
 
     .hero { padding: 75px 0 55px; background: radial-gradient(circle at 50% 0%, rgba(197,155,39,.08), transparent 40%), var(--white); text-align: center; }
-    .tag { display: inline-block; padding: 6px 14px; background: #111; color: var(--gold-light); border-radius: 100px; font-size: 11px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
     h1 { font-size: clamp(30px, 4.8vw, 52px); line-height: 1.15; letter-spacing: -1.5px; max-width: 800px; margin: auto; font-weight: 900; }
     h1 span { color: var(--gold); background: rgba(197,155,39,0.1); padding: 0 6px; border-radius: 4px; }
     .hero-text { margin-top: 22px; font-size: 17px; color: #444; max-width: 650px; margin-inline: auto; line-height: 1.7; }
@@ -50,6 +49,12 @@
     .section-label { color: var(--gold); font-size: 11px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
     h2 { font-size: clamp(24px, 3.2vw, 38px); line-height: 1.2; letter-spacing: -1px; font-weight: 800; }
     .section-head p { color: var(--gray); margin-top: 12px; font-size: 15px; }
+
+    /* DOR E CONEXÃO */
+    .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 800px; margin: auto; text-align: left; }
+    .pain-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .pain-card h3 { font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+    .pain-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
 
     .video-section { text-align: center; background: var(--dark); color: white; border-radius: 20px; padding: 50px 20px; max-width: 780px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
     .video-wrapper { max-width: 300px; margin: 25px auto; background: #000; border-radius: 14px; overflow: hidden; aspect-ratio: 9 / 16; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
@@ -72,19 +77,12 @@
     .bonus-box h3 { font-size: 20px; margin-bottom: 10px; font-weight: 800; color: var(--gold-light); }
     .bonus-box p { font-size: 14px; color: #d0d0d0; line-height: 1.6; }
 
-    .audience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 780px; margin: auto; text-align: left; }
-    .audience-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
-    .audience-card h3 { font-size: 16px; margin-bottom: 10px; font-weight: 700; }
-    .audience-card ul { list-style: none; display: grid; gap: 8px; font-size: 13px; color: var(--gray); }
-    .audience-card li::before { content: "• "; color: var(--gold); font-weight: bold; }
-
     /* FAQ */
     .faq-container { max-width: 720px; margin: auto; text-align: left; }
     .faq-item { background: white; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
     .faq-item.active { border-color: var(--gold); }
     .faq-question { width: 100%; padding: 16px 20px; background: none; border: 0; text-align: left; font-weight: 700; font-size: 14px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
     .faq-answer { padding: 0 20px 16px; color: var(--gray); font-size: 13px; display: none; line-height: 1.6; }
-    .faq-item.active .faq-answer { display: block; }
 
     .ticker-wrap { background: var(--black); color: var(--gold-light); padding: 16px 0; overflow: hidden; white-space: nowrap; width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333; }
     .ticker { display: inline-block; animation: marquee 28s linear infinite; font-size: 14px; font-style: italic; font-weight: 600; }
@@ -98,7 +96,7 @@
     footer p { margin-bottom: 4px; }
 
     @media (max-width: 768px) {
-      .audience-grid { grid-template-columns: 1fr; }
+      .pain-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -115,18 +113,47 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="tag">Direção Real • Sem Fórmulas Mágicas</div>
       <h1>Você sente que precisa começar no Marketing Digital, <span>mas não sabe como?</span></h1>
       <p class="hero-text">O Clareza Digital ajuda-te a escolher uma direção, identificar quem queres ajudar e sair da teoria para a prática — com um plano estruturado para os próximos 30 dias.</p>
-      <p class="hero-subtext">Não prometemos dinheiro rápido, só uma direção mas que, se aplicada como instruímos, trará grandes mudanças.</p>
+      <p class="hero-subtext">Um caminho honesto e prático para transformar o teu conhecimento em resultados reais, sem ruído e sem confusão.</p>
       <div style="max-width: 400px; margin: 30px auto 0;">
         <a href="#apresentacao" class="btn btn-gold">VER VÍDEO E CONHECER O MÉTODO 👇</a>
       </div>
     </div>
   </section>
 
-  <!-- VSL + BOTÃO "DECIDIR AGORA" LOGO ABAIXO DO VÍDEO -->
-  <section id="apresentacao" class="section-light">
+  <!-- CONEXÃO E RESOLUÇÃO DE DORES -->
+  <section class="section-light">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">Identificação</div>
+        <h2>Por que parece tão difícil avançar no digital?</h2>
+        <p>Se te sentes estagnado, a culpa não é tua. Vê se te reconheces nalguma destas situações:</p>
+      </div>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <h3>Excesso de informação sem rumo</h3>
+          <p>Assistes a dezenas de vídeos, guardas publicações, compras cursos e, no fim do mês, continuas exatamente no mesmo lugar por tentar decidir tudo ao mesmo tempo.</p>
+        </div>
+        <div class="pain-card">
+          <h3>O bloqueio na hora de vender</h3>
+          <p>Já tentaste publicar ou criar algo, mas faltam clientes, as conversas não avançam e sentes que estás a falar sozinho para uma parede vazia.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Falta de clareza na oferta</h3>
+          <p>Tens vontade de trabalhar e competências reais, mas não sabes exatamente o que vender, para quem vender nem como estruturar o teu primeiro preço.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Cansaço mental e desistência</h3>
+          <p>A sensação constante de estar atrasado faz com que saltes de estratégia em estratégia, gerando exaustão em vez de progresso financeiro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VSL + PRIMEIRO BOTÃO "DECIDIR AGORA" -->
+  <section id="apresentacao">
     <div class="container">
       <div class="video-section">
         <div class="section-label" style="color: var(--gold-light);">Nota do Autor</div>
@@ -137,8 +164,8 @@
           <iframe src="https://www.youtube.com/embed/ToxV7EyNNT4" title="Vídeo de Apresentação" allowfullscreen></iframe>
         </div>
 
-        <!-- BOTÃO "DECIDIR AGORA" LOGO APÓS O VÍDEO -->
-        <div style="max-width: 380px; margin: 20px auto 0;">
+        <!-- PRIMEIRO BOTÃO "DECIDIR AGORA" LOGO APÓS O VÍDEO -->
+        <div style="max-width: 380px; margin: 25px auto 0;">
           <a href="https://pay.tutora.co.mz/58889795912a4b84bf757ba1593d0a6d" target="_blank" class="btn btn-gold">
             DECIDIR AGORA 🚀
           </a>
@@ -149,12 +176,12 @@
   </section>
 
   <!-- MÉTODO CLAREZA -->
-  <section>
+  <section class="section-light">
     <div class="container">
       <div class="section-head">
         <div class="section-label">O Método</div>
-        <h2>Como o Método CLAREZA funciona</h2>
-        <p>Sete passos por ordem. Cada letra resolve uma decisão[span_0](start_span)[span_0](end_span). Nenhuma etapa deve ser saltada[span_1](start_span)[span_1](end_span).</p>
+        <h2>Como o Método CLAREZA resolve isso</h2>
+        <p>Sete passos por ordem. Cada letra resolve uma decisão cirúrgica[span_0](start_span)[span_0](end_span). Nenhuma etapa deve ser saltada[span_1](start_span)[span_1](end_span).</p>
       </div>
 
       <div class="method-grid">
@@ -191,12 +218,12 @@
   </section>
 
   <!-- O QUE TERÁ AO TERMINAR + BÔNUS -->
-  <section class="section-light">
+  <section>
     <div class="container">
       <div class="section-head">
         <div class="section-label">Transformação Concreta</div>
         <h2>O que terá ao terminar[span_9](start_span)[span_9](end_span)</h2>
-        <p>Este guia não termina com inspiração. Termina com decisões escritas[span_10](start_span)[span_10](end_span):</p>
+        <p>Este guia não termina com inspiração. Termina com decisões escritas e aplicáveis[span_10](start_span)[span_10](end_span):</p>
       </div>
 
       <div class="results-list">
@@ -223,38 +250,7 @@
     </div>
   </section>
 
-  <!-- PARA QUEM É / NÃO É -->
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <div class="section-label">Alinhamento</div>
-        <h2>Para quem é e para quem não é</h2>
-      </div>
-
-      <div class="audience-grid">
-        <div class="audience-card">
-          <h3>Para quem é</h3>
-          <ul>
-            <li>Quem quer começar e não sabe por onde[span_23](start_span)[span_23](end_span).</li>
-            <li>Quem começou, parou e acha que "não tem jeito[span_24](start_span)"[span_24](end_span).</li>
-            <li>Quem já começou mas muda de estratégia todas as semanas[span_25](start_span)[span_25](end_span).</li>
-            <li>Quem tem uma competência real e quer transformá-la numa oferta simples[span_26](start_span)[span_26](end_span).</li>
-          </ul>
-        </div>
-        <div class="audience-card" style="border-color: #c59b27;">
-          <h3>Para quem NÃO é</h3>
-          <ul>
-            <li>Quem procura dinheiro rápido ou fórmulas de resultados em sete dias[span_27](start_span)[span_27](end_span).</li>
-            <li>Quem exige garantias absolutas de vendas ou rendimento[span_28](start_span)[span_28](end_span).</li>
-            <li>Quem procura atalhos técnicos avançados de anúncios ou automações[span_29](start_span)[span_29](end_span).</li>
-            <li>Quem prefere leitura passiva sem responder a exercícios[span_30](start_span)[span_30](end_span).</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ 7 PERGUNTAS -->
+  <!-- FAQ 7 PERGUNTAS COM RESPOSTAS FUNCIONAIS -->
   <section class="section-light">
     <div class="container">
       <div class="section-head">
@@ -273,7 +269,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">3. O guia garante vendas ou resultados financeiros? <span>+</span></button>
-          <div class="faq-answer">Não. Nenhum guia honesto garante vendas[span_31](start_span)[span_31](end_span)[span_32](start_span)[span_32](end_span). O que o método garante é um caminho estruturado para deixar de trabalhar às cegas[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span). O resultado depende inteiramente da dedicação e execução de cada um[span_35](start_span)[span_35](end_span)[span_36](start_span)[span_36](end_span).</div>
+          <div class="faq-answer">Não. Nenhum guia honesto garante vendas[span_23](start_span)[span_23](end_span)[span_24](start_span)[span_24](end_span). O que o método garante é um caminho estruturado para deixar de trabalhar às cegas[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span). O resultado depende inteiramente da dedicação e execução de cada um[span_27](start_span)[span_27](end_span)[span_28](start_span)[span_28](end_span).</div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">4. Preciso de investir em ferramentas caras ou computadores? <span>+</span></button>
@@ -285,4 +281,8 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">6. E se eu não tiver muito tempo livre na minha rotina? <span>+</span></button>
-          <div class="faq-answer">O plano foi estruturado para caber em r
+          <div class="faq-answer">O plano foi estruturado para caber em rotinas apertadas (cerca de 5 a 8 horas por semana), adaptando-se ao tempo real que tens disponível.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">7. Por onde devo começar assim que adquirir o método? <span>+</span></button>
+          <div class="faq-answer">Basta abrir o material na Nota do Autor e seguir a ordem recomendad
