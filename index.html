@@ -3,286 +3,971 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clareza para Começar no Digital</title>
-  <meta name="description" content="Um guia prático para sair da confusão, escolher uma direção e começar a executar.">
+
+  <title>Clareza para Começar no Digital | Clareza Digital</title>
+
+  <meta
+    name="description"
+    content="Um guia prático para quem quer começar no digital com mais clareza, direção e um plano de ação de 30 dias."
+  >
+
   <style>
     :root {
       --black: #0c0c0c;
       --dark: #161616;
+      --dark-2: #202020;
       --gold: #c59b27;
       --gold-light: #dfbe64;
       --white: #ffffff;
       --cream: #f9f8f5;
       --gray: #686868;
+      --gray-light: #999999;
       --border: #e2dfd7;
       --green: #15573b;
+      --shadow: 0 15px 40px rgba(0,0,0,.08);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: Inter, Arial, Helvetica, sans-serif; background: var(--white); color: var(--black); line-height: 1.75; }
-    a { text-decoration: none; color: inherit; }
-    button { font: inherit; }
-    .container { width: min(920px, 92%); margin: auto; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    header { padding: 18px 0; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.96); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px); }
-    .nav { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-weight: 900; letter-spacing: 1.5px; font-size: 13px; text-transform: uppercase; }
-    .logo span { color: var(--gold); }
-    .nav-link { font-size: 13px; color: var(--black); font-weight: 700; background: var(--cream); padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-    .hero { padding: 75px 0 55px; background: radial-gradient(circle at 50% 0%, rgba(197,155,39,.08), transparent 40%), var(--white); text-align: center; }
-    h1 { font-size: clamp(30px, 4.8vw, 52px); line-height: 1.15; letter-spacing: -1.5px; max-width: 800px; margin: auto; font-weight: 900; }
-    h1 span { color: var(--gold); background: rgba(197,155,39,0.1); padding: 0 6px; border-radius: 4px; }
-    .hero-text { margin-top: 22px; font-size: 17px; color: #444; max-width: 650px; margin-inline: auto; line-height: 1.7; }
-    .hero-subtext { margin-top: 15px; font-size: 14px; color: var(--gray); font-style: italic; }
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-    .btn { border: 0; border-radius: 10px; padding: 18px 32px; font-weight: 800; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-align: center; font-size: 16px; width: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
-    .btn-gold { background: var(--gold); color: white; }
-    .btn-gold:hover { transform: translateY(-2px); background: #ab8320; }
-    .btn-whatsapp { background: var(--green); color: white; margin-top: 12px; }
-    .btn-whatsapp:hover { background: #0f3e29; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    section { padding: 75px 0; }
-    .section-light { background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .section-head { max-width: 700px; margin: 0 auto 40px auto; text-align: center; }
-    .section-label { color: var(--gold); font-size: 11px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-    h2 { font-size: clamp(24px, 3.2vw, 38px); line-height: 1.2; letter-spacing: -1px; font-weight: 800; }
-    .section-head p { color: var(--gray); margin-top: 12px; font-size: 15px; }
+    button {
+      font: inherit;
+    }
 
-    /* DOR E CONEXÃO */
-    .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 800px; margin: auto; text-align: left; }
-    .pain-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-    .pain-card h3 { font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
-    .pain-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+    .container {
+      width: min(920px, 92%);
+      margin: auto;
+    }
 
-    .video-section { text-align: center; background: var(--dark); color: white; border-radius: 20px; padding: 50px 20px; max-width: 780px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
-    .video-wrapper { max-width: 300px; margin: 25px auto; background: #000; border-radius: 14px; overflow: hidden; aspect-ratio: 9 / 16; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    .video-wrapper iframe { width: 100%; height: 100%; border: 0; }
+    /* =========================
+       HEADER
+    ========================= */
 
-    .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; max-width: 820px; margin: auto; text-align: left; }
-    .method-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; gap: 14px; align-items: flex-start; }
-    .method-letter { background: var(--black); color: var(--gold); width: 34px; height: 34px; border-radius: 6px; display: grid; place-items: center; font-weight: 900; font-size: 16px; flex-shrink: 0; }
-    .method-info h3 { font-size: 15px; margin-bottom: 3px; font-weight: 700; }
-    .method-info p { font-size: 13px; color: var(--gray); }
+    header {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
 
-    .results-list { display: grid; gap: 10px; max-width: 780px; margin: auto; text-align: left; }
-    .result-item { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; }
-    .result-check { color: var(--gold); font-weight: 900; font-size: 15px; flex-shrink: 0; }
-    .result-text h3 { font-size: 14px; margin-bottom: 2px; font-weight: 700; }
-    .result-text p { font-size: 13px; color: var(--gray); }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
 
-    .bonus-box { background: linear-gradient(135deg, #121212, #202020); color: white; border-radius: 16px; padding: 32px; max-width: 780px; margin: 35px auto 0; border: 2px solid var(--gold); text-align: left; box-shadow: 0 10px 30px rgba(197,155,39,0.15); }
-    .bonus-badge { display: inline-block; background: var(--gold); color: white; font-size: 10px; font-weight: 800; padding: 4px 12px; border-radius: 100px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
-    .bonus-box h3 { font-size: 20px; margin-bottom: 10px; font-weight: 800; color: var(--gold-light); }
-    .bonus-box p { font-size: 14px; color: #d0d0d0; line-height: 1.6; }
+    .logo {
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
 
-    /* FAQ */
-    .faq-container { max-width: 720px; margin: auto; text-align: left; }
-    .faq-item { background: white; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
-    .faq-item.active { border-color: var(--gold); }
-    .faq-question { width: 100%; padding: 16px 20px; background: none; border: 0; text-align: left; font-weight: 700; font-size: 14px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { padding: 0 20px 16px; color: var(--gray); font-size: 13px; display: none; line-height: 1.6; }
+    .logo span {
+      color: var(--gold);
+    }
 
-    .ticker-wrap { background: var(--black); color: var(--gold-light); padding: 16px 0; overflow: hidden; white-space: nowrap; width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333; }
-    .ticker { display: inline-block; animation: marquee 28s linear infinite; font-size: 14px; font-style: italic; font-weight: 600; }
-    @keyframes marquee { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+    .nav-link {
+      font-size: 13px;
+      color: var(--black);
+      font-weight: 700;
+      background: var(--cream);
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
 
-    .offer { background: var(--black); color: white; padding: 80px 0; text-align: center; }
-    .offer-box { max-width: 700px; margin: auto; }
-    .offer-price { font-size: clamp(40px, 6vw, 65px); font-weight: 900; color: var(--gold-light); line-height: 1; margin: 15px 0; }
+    /* =========================
+       BUTTONS
+    ========================= */
 
-    footer { padding: 25px 0; text-align: center; color: var(--gray); font-size: 12px; background: var(--cream); border-top: 1px solid var(--border); }
-    footer p { margin-bottom: 4px; }
+    .btn {
+      border: 0;
+      border-radius: 10px;
+      padding: 17px 28px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all .2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+      font-size: 16px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      background: #ab8320;
+      box-shadow: 0 14px 30px rgba(197,155,39,.25);
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: white;
+      margin-top: 12px;
+    }
+
+    .btn-whatsapp:hover {
+      background: #0f3e29;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,.3);
+      margin-top: 12px;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 75px 0 60px;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(197,155,39,.09),
+          transparent 40%
+        ),
+        var(--white);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(30px, 4.8vw, 52px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      max-width: 800px;
+      margin: auto;
+      font-weight: 900;
+    }
+
+    h1 span {
+      color: var(--gold);
+      background: rgba(197,155,39,.1);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .hero-text {
+      margin-top: 22px;
+      font-size: 17px;
+      color: #444;
+      max-width: 650px;
+      margin-inline: auto;
+      line-height: 1.7;
+    }
+
+    .hero-subtext {
+      margin-top: 15px;
+      font-size: 14px;
+      color: var(--gray);
+      font-style: italic;
+      max-width: 620px;
+      margin-inline: auto;
+    }
+
+    .hero-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px auto 0;
+    }
+
+    .hero-badge {
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero-cta {
+      max-width: 400px;
+      margin: 30px auto 0;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-light {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(24px, 3.2vw, 38px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      font-weight: 800;
+    }
+
+    .section-head p {
+      color: var(--gray);
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    /* =========================
+       PAIN
+    ========================= */
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .pain-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.02);
+    }
+
+    .pain-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .pain-card p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* =========================
+       VSL
+    ========================= */
+
+    .video-section {
+      text-align: center;
+      background: var(--dark);
+      color: white;
+      border-radius: 20px;
+      padding: 50px 20px;
+      max-width: 780px;
+      margin: 0 auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+
+    .video-wrapper {
+      max-width: 300px;
+      margin: 25px auto;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+      box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* =========================
+       METHOD
+    ========================= */
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      max-width: 820px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .method-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .method-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .method-letter {
+      background: var(--black);
+      color: var(--gold);
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .method-info h3 {
+      font-size: 15px;
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    .method-info p {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* =========================
+       RESULTS
+    ========================= */
+
+    .results-list {
+      display: grid;
+      gap: 10px;
+      max-width: 780px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .result-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .result-check {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .result-text h3 {
+      font-size: 14px;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .result-text p {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* =========================
+       ACCOMPANHAMENTO
+    ========================= */
+
+    .support-box {
+      background: linear-gradient(135deg, #121212, #202020);
+      color: white;
+      border-radius: 16px;
+      padding: 34px;
+      max-width: 780px;
+      margin: 40px auto 0;
+      border: 2px solid var(--gold);
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(197,155,39,.15);
+    }
+
+    .support-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .support-box h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: 800;
+      color: var(--gold-light);
+    }
+
+    .support-box > p {
+      font-size: 14px;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+
+    .weeks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .week {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      padding: 16px;
+      background: rgba(255,255,255,.03);
+    }
+
+    .week strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .week span {
+      color: #ccc;
+      font-size: 12px;
+    }
+
+    /* =========================
+       SOCIAL PROOF
+    ========================= */
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .proof-card {
+      min-height: 190px;
+      border: 1px dashed #cfc8b7;
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    .proof-note {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* =========================
+       AUTHOR
+    ========================= */
+
+    .author-box {
+      max-width: 780px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .author-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: var(--cream);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    .author-text p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .author-name {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq-container {
+      max-width: 720px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+
+    .faq-item.active {
+      border-color: var(--gold);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 16px 20px;
+      background: none;
+      border: 0;
+      text-align: left;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .faq-question span {
+      color: var(--gold);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      padding: 0 20px 18px;
+      color: var(--gray);
+      font-size: 13px;
+      display: none;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* =========================
+       TICKER
+    ========================= */
+
+    .ticker-wrap {
+      background: var(--black);
+      color: var(--gold-light);
+      padding: 16px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    .ticker {
+      display: inline-block;
+      animation: marquee 28s linear infinite;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    @keyframes marquee {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(-50%,0,0); }
+    }
+
+    /* =========================
+       FINAL OFFER
+    ========================= */
+
+    .offer {
+      background: var(--black);
+      color: white;
+      padding: 85px 0;
+      text-align: center;
+    }
+
+    .offer-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .offer-tag {
+      display: inline-block;
+      color: var(--gold-light);
+      border: 1px solid rgba(223,190,100,.4);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+
+    .offer-box h2 {
+      color: white;
+    }
+
+    .offer-description {
+      color: #cfcfcf;
+      max-width: 600px;
+      margin: 14px auto 0;
+      font-size: 14px;
+    }
+
+    .offer-price {
+      font-size: clamp(40px, 6vw, 65px);
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1;
+      margin: 20px 0;
+    }
+
+    .offer-list {
+      max-width: 480px;
+      margin: 25px auto;
+      text-align: left;
+      display: grid;
+      gap: 9px;
+    }
+
+    .offer-list div {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .offer-list span {
+      color: var(--gold-light);
+      margin-right: 7px;
+      font-weight: 900;
+    }
+
+    .offer-note {
+      color: #999;
+      font-size: 11px;
+      margin-top: 15px;
+    }
+
+    /* =========================
+       FINAL MESSAGE
+    ========================= */
+
+    .final-message {
+      padding: 75px 0;
+      text-align: center;
+      background: var(--white);
+    }
+
+    .final-message p {
+      max-width: 650px;
+      margin: 15px auto 0;
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    .final-highlight {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: var(--gray);
+      font-size: 12px;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      margin-bottom: 4px;
+    }
+
+    /* =========================
+       MOBILE CTA
+    ========================= */
+
+    .mobile-cta {
+      display: none;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 768px) {
-      .pain-grid { grid-template-columns: 1fr; }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .weeks {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .author-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .author-photo {
+        margin: auto;
+      }
+
+      .mobile-cta {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 9px 12px;
+        background: rgba(12,12,12,.96);
+        z-index: 100;
+        border-top: 1px solid rgba(197,155,39,.35);
+      }
+
+      .mobile-cta a {
+        display: block;
+        background: var(--gold);
+        color: white;
+        text-align: center;
+        padding: 11px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      footer {
+        padding-bottom: 80px;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="container nav">
     <div class="logo">Clareza <span>Digital</span></div>
-    <a href="#oferta" class="nav-link">Garantir Acesso</a>
+    <a href="#oferta" class="nav-link">Garantir acesso</a>
   </div>
 </header>
 
 <main>
+
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h1>Você sente que precisa começar no Marketing Digital, <span>mas não sabe como?</span></h1>
-      <p class="hero-text">O Clareza Digital ajuda-te a escolher uma direção, identificar quem queres ajudar e sair da teoria para a prática — com um plano estruturado para os próximos 30 dias.</p>
-      <p class="hero-subtext">Um caminho honesto e prático para transformar o teu conhecimento em resultados reais, sem ruído e sem confusão.</p>
-      <div style="max-width: 400px; margin: 30px auto 0;">
-        <a href="#apresentacao" class="btn btn-gold">VER VÍDEO E CONHECER O MÉTODO 👇</a>
+
+      <h1>
+        Queres começar no Marketing Digital,
+        <span>mas não sabes por onde começar?</span>
+      </h1>
+
+      <p class="hero-text">
+        O Clareza Digital foi criado para te ajudar a escolher uma direção,
+        entender quem queres ajudar, transformar conhecimento numa solução
+        e começar a executar com um plano claro para os próximos 30 dias.
+      </p>
+
+      <p class="hero-subtext">
+        Sem promessas de dinheiro rápido. Sem fórmulas mágicas.
+        Apenas clareza, estrutura e ação.
+      </p>
+
+      <div class="hero-info">
+        <div class="hero-badge">📘 Guia Digital</div>
+        <div class="hero-badge">📱 Aplicável pelo telemóvel</div>
+        <div class="hero-badge">🗓️ Plano de 30 dias</div>
+        <div class="hero-badge">🤝 4 semanas de acompanhamento</div>
       </div>
+
+      <div class="hero-cta">
+        <a href="#apresentacao" class="btn btn-gold">
+          VER O VÍDEO E CONHECER O MÉTODO ↓
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- CONEXÃO E RESOLUÇÃO DE DORES -->
+  <!-- DORES -->
   <section class="section-light">
+
     <div class="container">
+
       <div class="section-head">
-        <div class="section-label">Identificação</div>
-        <h2>Por que parece tão difícil avançar no digital?</h2>
-        <p>Se te sentes estagnado, a culpa não é tua. Vê se te reconheces nalguma destas situações:</p>
+        <div class="section-label">Talvez estejas aqui</div>
+
+        <h2>
+          O problema nem sempre é falta de informação.
+        </h2>
+
+        <p>
+          Muitas vezes, o problema é ter informação demais e não saber
+          qual deve ser o próximo passo.
+        </p>
       </div>
 
       <div class="pain-grid">
+
         <div class="pain-card">
-          <h3>Excesso de informação sem rumo</h3>
-          <p>Assistes a dezenas de vídeos, guardas publicações, compras cursos e, no fim do mês, continuas exatamente no mesmo lugar por tentar decidir tudo ao mesmo tempo.</p>
+          <h3>Excesso de informação sem direção</h3>
+          <p>
+            Guardas vídeos, publicações, cursos e ideias, mas continuas
+            sem saber qual caminho seguir.
+          </p>
         </div>
+
         <div class="pain-card">
-          <h3>O bloqueio na hora de vender</h3>
-          <p>Já tentaste publicar ou criar algo, mas faltam clientes, as conversas não avançam e sentes que estás a falar sozinho para uma parede vazia.</p>
+          <h3>Não sabes o que vender</h3>
+          <p>
+            Tens conhecimentos ou habilidades, mas ainda não consegues
+            transformá-los numa oferta simples.
+          </p>
         </div>
+
         <div class="pain-card">
-          <h3>Falta de clareza na oferta</h3>
-          <p>Tens vontade de trabalhar e competências reais, mas não sabes exatamente o que vender, para quem vender nem como estruturar o teu primeiro preço.</p>
+          <h3>Começas e depois paras</h3>
+          <p>
+            Começas motivado, encontras uma nova estratégia e acabas
+            por abandonar aquilo que estavas a construir.
+          </p>
         </div>
+
         <div class="pain-card">
-          <h3>Cansaço mental e desistência</h3>
-          <p>A sensação constante de estar atrasado faz com que saltes de estratégia em estratégia, gerando exaustão em vez de progresso financeiro.</p>
+          <h3>Medo de escolher errado</h3>
+          <p>
+            Pensas tanto sobre qual nicho, produto ou estratégia escolher
+            que acabas por não testar nada.
+          </p>
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- VSL + PRIMEIRO BOTÃO "DECIDIR AGORA" -->
+  <!-- VSL -->
   <section id="apresentacao">
+
     <div class="container">
+
       <div class="video-section">
-        <div class="section-label" style="color: var(--gold-light);">Nota do Autor</div>
-        <h2>Antes de começar, assiste a este vídeo</h2>
-        <p style="color: #bbb; font-size: 14px; max-width: 500px; margin: 12px auto 0; line-height: 1.6;">Talvez o que esteja a impedir o teu início no Digital não seja a falta de informação, mas a dificuldade de entender que tudo começa com uma decisão que aparenta ser simples, mas é ela que muda tudo.</p>
-        
+
+        <div class="section-label" style="color:var(--gold-light);">
+          Antes de decidir
+        </div>
+
+        <h2>
+          Assiste primeiro. Depois decide.
+        </h2>
+
+        <p style="color:#bbb;font-size:14px;max-width:520px;margin:12px auto 0;">
+          Talvez o que esteja a impedir o teu início no digital não seja
+          a falta de informação, mas a dificuldade de transformar informação
+          em uma direção concreta.
+        </p>
+
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ToxV7EyNNT4" title="Vídeo de Apresentação" allowfullscreen></iframe>
-        </div>
-
-        <!-- PRIMEIRO BOTÃO "DECIDIR AGORA" LOGO APÓS O VÍDEO -->
-        <div style="max-width: 380px; margin: 25px auto 0;">
-          <a href="https://pay.tutora.co.mz/58889795912a4b84bf757ba1593d0a6d" target="_blank" class="btn btn-gold">
-            DECIDIR AGORA 🚀
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- MÉTODO CLAREZA -->
-  <section class="section-light">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-label">O Método</div>
-        <h2>Como o Método CLAREZA resolve isso</h2>
-        <p>Sete passos por ordem. Cada letra resolve uma decisão cirúrgica[span_0](start_span)[span_0](end_span). Nenhuma etapa deve ser saltada[span_1](start_span)[span_1](end_span).</p>
-      </div>
-
-      <div class="method-grid">
-        <div class="method-card">
-          <div class="method-letter">C</div>
-          <div class="method-info"><h3>Clarificar</h3><p>Objetivo, situação atual, recursos, tempo, limites e o que não quer fazer[span_2](start_span)[span_2](end_span).</p></div>
-        </div>
-        <div class="method-card">
-          <div class="method-letter">L</div>
-          <div class="method-info"><h3>Localizar</h3><p>Quem é a pessoa específica que quer ajudar e que linguagem usa[span_3](start_span)[span_3](end_span).</p></div>
-        </div>
-        <div class="method-card">
-          <div class="method-letter">A</div>
-          <div class="method-info"><h3>Analisar</h3><p>Que problema real vai resolver e porquê esse e não outro[span_4](start_span)[span_4](end_span).</p></div>
-        </div>
-        <div class="method-card">
-          <div class="method-letter">R</div>
-          <div class="method-info"><h3>Resolver</h3><p>Resultado, solução, formato, primeira oferta e preço-piloto[span_5](start_span)[span_5](end_span).</p></div>
-        </div>
-        <div class="method-card">
-          <div class="method-letter">E</div>
-          <div class="method-info"><h3>Executar</h3><p>Conteúdo, testes, conversas, diagnóstico e apresentação da oferta[span_6](start_span)[span_6](end_span).</p></div>
-        </div>
-        <div class="method-card">
-          <div class="method-letter">Z</div>
-          <div class="method-info"><h3>Zelar</h3><p>Proteção do foco contra excesso, comparação e troca constante[span_7](start_span)[span_7](end_span).</p></div>
-        </div>
-        <div class="method-card" style="grid-column: 1 / -1; max-width: 400px; margin: auto;">
-          <div class="method-letter">A</div>
-          <div class="method-info"><h3>Avaliar</h3><p>Leitura de resultados e decisão do próximo ajuste[span_8](start_span)[span_8](end_span).</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- O QUE TERÁ AO TERMINAR + BÔNUS -->
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <div class="section-label">Transformação Concreta</div>
-        <h2>O que terá ao terminar[span_9](start_span)[span_9](end_span)</h2>
-        <p>Este guia não termina com inspiração. Termina com decisões escritas e aplicáveis[span_10](start_span)[span_10](end_span):</p>
-      </div>
-
-      <div class="results-list">
-        <div class="result-item"><div class="result-check">1.</div><div class="result-text"><h3>Direção escolhida</h3><p>Adequada ao seu tempo, recursos e limites[span_11](start_span)[span_11](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">2.</div><div class="result-text"><h3>Público específico</h3><p>Descrito com detalhe suficiente para o reconhecer[span_12](start_span)[span_12](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">3.</div><div class="result-text"><h3>Problema real escolhido</h3><p>Com critério, e não por moda[span_13](start_span)[span_13](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">4.</div><div class="result-text"><h3>Frase de clareza</h3><p>Explica o que faz, para quem e com que resultado[span_14](start_span)[span_14](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">5.</div><div class="result-text"><h3>Solução definida</h3><p>Resultado, entrega e formato[span_15](start_span)[span_15](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">6.</div><div class="result-text"><h3>Primeira oferta</h3><p>Simples, pequena e testável[span_16](start_span)[span_16](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">7.</div><div class="result-text"><h3>Preço-piloto</h3><p>Com critérios definidos, e não um número inventado[span_17](start_span)[span_17](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">8.</div><div class="result-text"><h3>Plano de conteúdo</h3><p>Com cinco tipos e uma estrutura repetível[span_18](start_span)[span_18](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">9.</div><div class="result-text"><h3>Roteiros práticos</h3><p>Roteiros de conversa e perguntas de diagnóstico éticas[span_19](start_span)[span_19](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">10.</div><div class="result-text"><h3>Biblioteca de modelos</h3><p>Modelos de carrosséis, vídeos curtos e convites[span_20](start_span)[span_20](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">11.</div><div class="result-text"><h3>Plano de 30 dias</h3><p>Dividido em quatro semanas[span_21](start_span)[span_21](end_span).</p></div></div>
-        <div class="result-item"><div class="result-check">12.</div><div class="result-text"><h3>Sistema de avaliação</h3><p>Mensal para decidir o que ajustar[span_22](start_span)[span_22](end_span).</p></div></div>
-      </div>
-
-      <!-- BÔNUS DE ACOMPANHAMENTO DE 4 SEMANAS -->
-      <div class="bonus-box">
-        <span class="bonus-badge">Bónus Exclusivo</span>
-        <h3>Acompanhamento de 4 semanas</h3>
-        <p>Não vais caminhar sozinho. Terás suporte e direcionamento prático durante 4 semanas inteiras para esclarecer dúvidas, destravar na execução e manter o foco no campo de batalha.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ 7 PERGUNTAS COM RESPOSTAS FUNCIONAIS -->
-  <section class="section-light">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-label">Esclarecimentos</div>
-        <h2>Dúvidas Frequentes</h2>
-      </div>
-
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">1. Como recebo o acesso ao método após a compra? <span>+</span></button>
-          <div class="faq-answer">O acesso é enviado digitalmente de forma imediata logo após a confirmação do pagamento através da Tutora.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">2. Preciso de experiência prévia no digital para começar? <span>+</span></button>
-          <div class="faq-answer">Não. O guia foi construído exatamente para quem está perdido no início ou travado sem saber como avançar.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">3. O guia garante vendas ou resultados financeiros? <span>+</span></button>
-          <div class="faq-answer">Não. Nenhum guia honesto garante vendas[span_23](start_span)[span_23](end_span)[span_24](start_span)[span_24](end_span). O que o método garante é um caminho estruturado para deixar de trabalhar às cegas[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span). O resultado depende inteiramente da dedicação e execução de cada um[span_27](start_span)[span_27](end_span)[span_28](start_span)[span_28](end_span).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">4. Preciso de investir em ferramentas caras ou computadores? <span>+</span></button>
-          <div class="faq-answer">Não. Todo o método foi desenhado para ser aplicado utilizando apenas o teu telemóvel e acesso à internet, sem custos desnecessários.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">5. Como funciona o acompanhamento de 4 semanas? <span>+</span></button>
-          <div class="faq-answer">Além do método completo, terás suporte direto e direcionamento prático durante 4 semanas inteiras para esclarecer dúvidas e ajustar a tua execução.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">6. E se eu não tiver muito tempo livre na minha rotina? <span>+</span></button>
-          <div class="faq-answer">O plano foi estruturado para caber em rotinas apertadas (cerca de 5 a 8 horas por semana), adaptando-se ao tempo real que tens disponível.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">7. Por onde devo começar assim que adquirir o método? <span>+</span></button>
-          <div class="faq-answer">Basta abrir o material na Nota do Autor e seguir a ordem recomendad
+          <iframe
+            src="https://www.youtube.com/embed/ToxV7EyNNT4"
+            title="Apresentação Clareza Digital"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </
